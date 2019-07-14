@@ -4,11 +4,12 @@ class SQL extends PDO{
 
     private $conn;
 
+    // Connecta o php ao db atravez do método magico __construct; logo não preciso instancia-lo
     public function __construct(){
 
         $this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
     }
-
+    
     private function setParans($statements, $parameters = array()){
 
         foreach ($parameters as $key => $value) {
