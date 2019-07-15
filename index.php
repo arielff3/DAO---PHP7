@@ -17,7 +17,20 @@ require_once("Config.php");
 // echo json_encode($busca);
 
 // Carrega um usuario usando um loguin e senha
+// $usuario = new Usuario();
+// $usuario->login("Amanda","123312");
+// echo $usuario;
 
-$usuario = new Usuario();
-$usuario->login("Amanda","123312");
-echo $usuario;
+// Inserir um usuario com o metodo construct
+// $inserir = new Usuario("Construct","!@#aa");
+// echo $inserir;
+
+// Atualizar um item da tabela (UPDATE)
+$cliente = new Usuario();
+$cliente->loadById(2);
+
+
+$cliente->update("Agora vai essa porra","aff");
+
+
+echo $cliente;
