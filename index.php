@@ -26,11 +26,13 @@ require_once("Config.php");
 // echo $inserir;
 
 // Atualizar um item da tabela (UPDATE)
-$cliente = new Usuario();
-$cliente->loadById(2);
+// $cliente = new Usuario();
+// $cliente->loadById(2);
+// $cliente->update("Agora vai essa porra","aff");
+// echo $cliente;
 
-
-$cliente->update("Agora vai essa porra","aff");
-
-
-echo $cliente;
+// Deletar campo
+$deletar = new Usuario();
+$deletar->loadById(3);
+$deletar->delete();
+echo $deletar;
